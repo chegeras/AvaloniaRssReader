@@ -1,0 +1,24 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:i="clr-namespace:Avalonia.Xaml.Interactivity;assembly=Avalonia.Xaml.Interactivity"
+    xmlns:ia="clr-namespace:Avalonia.Xaml.Interactions.Core;assembly=Avalonia.Xaml.Interactions">
+
+    <StackPanel>
+        <Button Content="Add subscription" Name="addSubscription">
+            <i:Interaction.Behaviors>
+                <ia:EventTriggerBehavior EventName="Click" SourceObject="{Binding #addSubscription}">
+                    <ia:InvokeCommandAction Command="{Binding AddNewSubscriptionCmd}"/>
+                </ia:EventTriggerBehavior>
+            </i:Interaction.Behaviors>
+        </Button>
+        <ItemsControl Items="{Binding SubscriptionList}">
+            <ItemsControl.DataTemplates>
+                <DataTemplate>
+                    <Grid Margin="5">
+                        <TextBlock Background="Blue" Text="{Binding Name}"/>
+                    </Grid>
+                </DataTemplate>
+            </ItemsControl.DataTemplates>
+        </ItemsControl>
+    </StackPanel>
+</UserControl>

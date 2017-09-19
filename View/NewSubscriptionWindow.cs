@@ -3,13 +3,13 @@ using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 using Serilog;
 
-namespace RSSReader
+namespace RSSReader.View
 {
-    public class MainWindow : Window
+    public class NewSubscriptionWindow : Window
     { 
-        public MainWindow()
+        public NewSubscriptionWindow()
         {
-            Log.Information("MainWindow constructor");
+            Log.Information("NewSubscriptionWindow constructor");
             InitializeComponent();
         }
 

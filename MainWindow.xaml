@@ -1,5 +1,12 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="RSSReader">
-    Hello World!
+        xmlns:locator="clr-namespace:RSSReader.Locators;assembly=RSSReader"
+        xmlns:v="clr-namespace:RSSReader.View;assembly=RSSReader"
+        Title="RSSReader"
+        DataContext="{x:Static locator:Locator.MainWindowViewModel}">
+    <Grid ColumnDefinitions="*,*">
+        <Border Grid.Column="0" BorderBrush="LimeGreen" BorderThickness="2">
+            <v:SubscriptionsControlView DataContext="{Binding SubscriptionsControl}"></v:SubscriptionsControlView>
+        </Border> 
+    </Grid>
 </Window>
