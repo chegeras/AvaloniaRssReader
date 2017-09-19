@@ -1,15 +1,13 @@
 using System.Collections.ObjectModel;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
-using Serilog;
 
-namespace RSSReader
+namespace RSSReader.View
 {
-    public class MainWindow : Window
+    public partial class SubscriptionsControlView : UserControl
     { 
-        public MainWindow()
+        public SubscriptionsControlView()
         {
-            Log.Information("MainWindow constructor");
             InitializeComponent();
         }
 
