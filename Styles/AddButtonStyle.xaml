@@ -1,0 +1,18 @@
+<Styles xmlns="https://github.com/avaloniaui">
+    <Style Selector="Button#addSubscription">
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="Width" Value="200"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/> 
+    </Style>
+    <Style Selector="Button:pointerover">
+        <Setter Property="Button.Background" Value="Blue"/>
+    </Style>
+    <Style Selector="Border#subscriptionPanelBorder">
+        <Setter Property="BorderBrush" Value="LimeGreen"/>
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="Width" Value="230"/>
+    </Style>
+    <Style Selector="StackPanel">
+        
+    </Style>
+</Styles>

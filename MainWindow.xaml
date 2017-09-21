@@ -3,10 +3,9 @@
         xmlns:locator="clr-namespace:RSSReader.Locators;assembly=RSSReader"
         xmlns:v="clr-namespace:RSSReader.View;assembly=RSSReader"
         Title="RSSReader"
-        DataContext="{x:Static locator:Locator.MainWindowViewModel}">
-    <Grid ColumnDefinitions="*,*">
-        <Border Grid.Column="0" BorderBrush="LimeGreen" BorderThickness="2">
-            <v:SubscriptionsControlView DataContext="{Binding SubscriptionsControl}"></v:SubscriptionsControlView>
-        </Border> 
+        DataContext="{x:Static locator:Locator.MainWindowViewModel}"
+        MinWidth="500">
+    <Grid ColumnDefinitions="*,*">  
+        <v:SubscriptionsControlView Grid.Column="0" DataContext="{Binding SubscriptionsControl}"></v:SubscriptionsControlView>
     </Grid>
 </Window>
