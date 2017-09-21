@@ -16,6 +16,9 @@
     <None Update="Subscriptions.json" CopyToOutputDirectory="PreserveNewest"/>
   </ItemGroup>
   <ItemGroup>
+    <Styles Include="\Styles\*.xaml"/>
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="Avalonia" Version="0.5.1"/>
     <PackageReference Include="Avalonia.Skia.Desktop" Version="0.5.1"/>
     <PackageReference Include="Avalonia.Win32" Version="0.5.1"/>
