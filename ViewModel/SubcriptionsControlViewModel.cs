@@ -1,5 +1,6 @@
 using System.Collections.ObjectModel;
 using System.Windows.Input;
+using RSSReader.Model;
 using RSSReader.View;
 
 namespace RSSReader.ViewModel
@@ -55,7 +56,7 @@ namespace RSSReader.ViewModel
         private void ShowAddSubscriptionWindow()
         {
             var newWindow = new NewSubscriptionWindow();
-            newWindow.ShowDialog();
+            var result = newWindow.ShowDialog<bool>();
         }
     }
 }

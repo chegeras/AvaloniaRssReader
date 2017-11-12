@@ -4,7 +4,7 @@ using System.IO;
 using Newtonsoft.Json;
 using Serilog;
 
-namespace RSSReader.ViewModel
+namespace RSSReader.Model
 {
     public class SubscriptionsRepository
     {
@@ -26,11 +26,20 @@ namespace RSSReader.ViewModel
             return subscriptions;
         }
 
+        public void AddSubscription(Subscription subscription)
+        {
+            var subscriptions = this.GetAllSubscriptions();
+            subscriptions.Add(subscription);
+            using (StreamWriter stream = new StreamWriter(this.repoPath, false)){ 
+                stream.WriteLine(JsonConvert.SerializeObject(subscriptions));
+            }
+
+        }
+
         private string ReadRepoFile()
         {
             string result = null;
             try{
-                var currentDir = Directory.GetCurrentDirectory();
                 result = File.ReadAllText(this.repoPath);
             }
             catch(Exception e)

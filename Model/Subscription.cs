@@ -1,4 +1,4 @@
-namespace RSSReader.ViewModel
+namespace RSSReader.Model
 {
     public class Subscription
     {
@@ -8,5 +8,6 @@ namespace RSSReader.ViewModel
         }
 
         public string Name {get;set;}
+        public string Url {get;set;}
     }
 }

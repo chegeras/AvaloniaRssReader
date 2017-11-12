@@ -1,16 +1,22 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:locator="clr-namespace:RSSReader.Locators;assembly=RSSReader"
         Title="RSSReader"
-        >
+        xmlns:locator="clr-namespace:RSSReader.Locators;assembly=RSSReader"
+        DataContext="{x:Static locator:Locator.NewSubscriptionViewModel}">
     <Grid RowDefinitions="*,*">
-        <StackPanel Grid.Row="0">
-            <TextBlock>Subscription Name</TextBlock>
-            <TextBox></TextBox>
-        </StackPanel>
-        <StackPanel Grid.Row="1">
-            <TextBlock>Subscription Url</TextBlock>
-            <TextBox></TextBox>
+        <StackPanel>
+            <StackPanel Grid.Row="0">
+                <TextBlock>Subscription Name</TextBlock>
+                <TextBox Text="{Binding Name}"></TextBox>
+            </StackPanel>
+            <StackPanel Grid.Row="1">
+                <TextBlock>Subscription Url</TextBlock>
+                <TextBox Text="{Binding Url}"></TextBox>
+            </StackPanel>
+            <Grid ColumnDefinitions="*,*">
+                <Button Grid.Column="0" Command="{Binding AddCmd}">Add</Button>
+                <Button Grid.Column="1" Command="{Binding CancelCmd}">Cancel</Button>
+            </Grid>
         </StackPanel>
     </Grid>
 </Window>

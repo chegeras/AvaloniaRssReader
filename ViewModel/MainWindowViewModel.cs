@@ -1,7 +1,7 @@
 using System.Collections.ObjectModel;
 using RSSReader.ViewModel;
 
-namespace RSSReader
+namespace RSSReader.ViewModel
 {
     public class MainWindowViewModel:NotifyingBase
     {
